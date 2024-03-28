@@ -1,6 +1,8 @@
-import express from "express";
-import data1 from "./singers.json" assert { type: "json" };
-const { singers } = data1.singers;
+// import express from "express";
+const express = require("express");
+// import data1 from "./singers.json" assert { type: "json" };
+// const { singers } = data1.singers;
+const { singers } = require("./singers.json");
 
 const app = express();
 
@@ -33,7 +35,7 @@ app.get("/singer/:id.html", (req, res) => {
 </body>
 
 </html>
-  `)
+  `);
 });
 
 app.listen(3000, () => {
